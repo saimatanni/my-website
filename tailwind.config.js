@@ -8,8 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#ff4d4f',  // Pinkish-orange
+        secondary: '#ff7f50',  // Coral
+      },
+      gradientColorStops: {
+        'start': '#ff4d4f',
+        'mid': '#ff7f50',
+        'end': '#ffa500',
       },
     },
   },
