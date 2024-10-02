@@ -95,7 +95,7 @@ const About = () => {
                 {/* Projects Completed */}
                 <div className="flex flex-col items-center">
                   <h3 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
-                    90+
+                    9+
                   </h3>
                   <p className="mt-2 text-gray-400">Projects Completed</p>
                 </div>
@@ -103,7 +103,7 @@ const About = () => {
                 {/* Happy Clients */}
                 <div className="flex flex-col items-center">
                   <h3 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
-                    15+
+                    10+
                   </h3>
                   <p className="mt-2 text-gray-400">Happy Clients</p>
                 </div>

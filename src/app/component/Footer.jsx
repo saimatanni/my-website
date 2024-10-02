@@ -1,9 +1,11 @@
 import React from 'react';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
-    <footer className="py-4 text-center text-white bg-gray-900">
-      <p>&copy; {new Date().getFullYear()} Shaima Alam Tanni. All Rights Reserved.</p>
+    <footer className="py-8 text-center bg-black">
+      <p className='text-white'>&copy; {new Date().getFullYear()} Shaima Alam Tanni. All Rights Reserved.</p>
+      <SocialLinks />
     </footer>
   );
 };
