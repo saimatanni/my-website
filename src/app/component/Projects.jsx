@@ -19,13 +19,6 @@ const Projects = () => {
       bgImage: "/project2-bg.jpg",
       demoLink: "https://partner.paymentsave.co.uk/login",
     },
-    // {
-    //   title: "Partner Portal with SSR",
-    //   description: "Implemented server-side rendering and secured with Next Auth for the partner portal.",
-    //   techStack: ["Next.js", "Redux", "CSS", "Material UI"],
-    //   bgImage: "/project3-bg.jpg",
-    //   demoLink: "https://partner-portal-next-js.vercel.app/",
-    // },
     {
       title: "MenuBookBD",
       description:
@@ -74,6 +67,14 @@ const Projects = () => {
       bgImage: "/project9-bg.jpg",
       demoLink: "https://demo.paybylink.devstream.com/login",
     },
+    {
+      title: "Link Sharing App",
+      description:
+        "Link sharing app featuring customizable and sharable social media links using Vite, React, and Tailwind CSS.",
+      techStack: ["Vite", "React", "Tailwind CSS"],
+      bgImage: "/project10-bg.jpg",
+      demoLink: "https://link-sharing-app-weld.vercel.app/",
+    },
   ];
 
   const [showAll, setShowAll] = useState(false);
@@ -81,35 +82,42 @@ const Projects = () => {
 
   return (
     <section className="py-16 text-white bg-black" id="projects">
-    <div className="container mx-auto">
-      <h2 className="mb-8 text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
-        My Latest Work
-      </h2>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {visibleProjects.map((project, index) => (
-          <div
-            key={index}
-            className="relative h-64 overflow-hidden transition-transform transform bg-center bg-cover rounded-lg shadow-lg hover:scale-105 hover:border-4 hover:border-pink-500"
-            style={{ backgroundImage: `url(${project.bgImage})` }}
-          >
-            <div className="absolute inset-0 flex flex-col justify-end p-6 transition-all bg-black bg-opacity-50 rounded-lg hover:bg-opacity-80">
-              <h3 className="text-2xl font-bold text-white">{project.title}</h3>
-              <p className="mb-2 text-white">{project.description}</p>
-              <a href={project.demoLink} className="text-pink-500 hover:underline">
-                View Project
-              </a>
+      <div className="container mx-auto">
+        <h2 className="mb-8 text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
+          My Latest Work
+        </h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {visibleProjects.map((project, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden transition-transform transform bg-center bg-cover rounded-lg shadow-lg h-72 hover:scale-105 hover:border-4 hover:border-pink-500"
+              style={{ backgroundImage: `url(${project.bgImage})` }}
+            >
+              <div className="absolute inset-0 flex flex-col justify-end p-6 transition-all bg-black bg-opacity-50 rounded-lg hover:bg-opacity-80">
+                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                <p className="mb-2 text-white">{project.description}</p>
+                <p className="text-sm font-semibold text-gray-300">
+                  Tech Stack: {project.techStack.join(", ")}
+                </p>
+                <a href={project.demoLink} className="mt-2 text-pink-500 hover:underline">
+                  View Project
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          {!showAll && (
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-6 py-3 text-white transition rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-purple-700"
+            >
+              See More Projects
+            </button>
+          )}
+        </div>
       </div>
-      <div className="mt-8 text-center">
-        <button onClick={()=>setShowAll(true)} className="px-6 py-3 text-white transition rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-purple-700">
-          See More Projects
-        </button>
-      </div>
-    </div>
-  </section>
-  
+    </section>
   );
 };
 

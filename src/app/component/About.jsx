@@ -28,7 +28,8 @@ const About = () => {
         {/* Profile Picture */}
         <div className="flex justify-center">
           <Image
-            src="/my-photo.png" // Replace with your image
+            src="/photo.jpg" // Replace with your image
+            // src="/my-photo.png" // Replace with your image
             alt="Shaima Alam Tanni"
             width={500}
             height={500}

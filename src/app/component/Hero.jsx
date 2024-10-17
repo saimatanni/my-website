@@ -5,6 +5,7 @@ const Hero = () => {
     <section className="py-16 text-center text-white bg-black" id="home">
       <div className="container mx-auto">
         <div className="relative w-40 h-40 mx-auto my-6 overflow-hidden rounded-full shadow-lg">
+          {/* <Image src="/photo.jpg" alt="Profile" layout="fill" objectFit="cover" className="rounded-full" /> */}
           <Image src="/my-photo.png" alt="Profile" layout="fill" objectFit="cover" className="rounded-full" />
         </div>
         <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-orange-500">
